@@ -51,7 +51,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: 100, height: 100)
-        layout.minimumLineSpacing = 10
+        layout.minimumLineSpacing = 20
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -107,17 +107,18 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             return UICollectionViewCell()
         }
         
-        let cells = [("Rain", "RainIcon"),
-                     ("Snow", "SnowIcon"),
-                     ("Sun", "SunIcon"),
-                     ("Cloud", "CloudIcon"),
-                     ("Lightning", "LightningIcon")]
+        let cells = [("Rain", "rainIcon"),
+                     ("Snow", "snowIcon"),
+                     ("Sun", "sunIcon"),
+                     ("Cloud", "cloudIcon"),
+                     ("Lightning", "lightningIcon")]
         
         let chosedCell = cells[indexPath.item]
         
         if indexPath.item < cells.count {
-            let title = cells[indexPath.item].0
-            cell.configure(with: title, tag: indexPath.item + 1, imageName: chosedCell.1)
+            let titleKey = cells[indexPath.item].0
+            let localizedTitle = NSLocalizedString(titleKey, comment: "")
+            cell.configure(with: localizedTitle, tag: indexPath.item + 1, imageName: chosedCell.1)
             cell.setButtonTarget(target: self, action: #selector(showWeatherScene(_:)))
         } else {
             cell.configure(with: nil, tag: nil, imageName: chosedCell.0)
@@ -129,12 +130,11 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     // MARK: - UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 100)
+        return CGSize(width: 80, height: 80)
     }
     
     @objc func showWeatherScene(_ sender: UIButton) {
         if sender.tag == previousSelectedTag {
-            // If the same button is clicked, do nothing
             return
         }
         

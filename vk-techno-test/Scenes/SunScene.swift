@@ -12,9 +12,20 @@ class SunScene: SKScene {
     override func didMove(to view: SKView) {
         backgroundColor = SKColor.cyan
         
+        if let sunnyEmitter = SKEmitterNode(fileNamed: "SunParticle.sks") {
+            sunnyEmitter.position = CGPoint(x: size.width / 2, y: size.height / 2)
+            sunnyEmitter.zPosition = -1
+            
+            sunnyEmitter.particleColor = SKColor.yellow
+            sunnyEmitter.particleColorBlendFactor = 1.0
+            
+            addChild(sunnyEmitter)
+        }
+        
         let sun = SKShapeNode(circleOfRadius: 50)
         sun.fillColor = SKColor.yellow
         sun.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        sun.zPosition = 1
         addChild(sun)
         
         let rotateAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: 10)
@@ -28,11 +39,6 @@ class SunScene: SKScene {
             ray.zRotation = CGFloat.pi / 4 * CGFloat(i)
             ray.run(repeatAction)
             addChild(ray)
-        }
-        
-        if let sunnyEmitter = SKEmitterNode(fileNamed: "SunParticle.sks") {
-            sunnyEmitter.position = CGPoint(x: size.width / 2, y: size.height / 2)
-            addChild(sunnyEmitter)
         }
     }
 }

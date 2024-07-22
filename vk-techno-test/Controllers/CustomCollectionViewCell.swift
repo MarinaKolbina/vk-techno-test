@@ -20,28 +20,29 @@ class CustomCollectionViewCell: UICollectionViewCell {
     private let button: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .systemBlue
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .clear
         return button
     }()
     
     override init(frame: CGRect)
     {
         super.init(frame: frame)
-        contentView.backgroundColor = .systemBlue
+        contentView.backgroundColor = .white
+        contentView.layer.cornerRadius = 16
         contentView.addSubview(imageView)
         contentView.addSubview(button)
         
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: 40),
-            imageView.heightAnchor.constraint(equalToConstant: 40),
+            imageView.widthAnchor.constraint(equalToConstant: 48),
+            imageView.heightAnchor.constraint(equalToConstant: 48),
             imageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10)
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5)
         ])
         
         NSLayoutConstraint.activate([
             button.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            button.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10),
+            button.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 35),
             button.widthAnchor.constraint(equalToConstant: 80),
             button.heightAnchor.constraint(equalToConstant: 40)
         ])

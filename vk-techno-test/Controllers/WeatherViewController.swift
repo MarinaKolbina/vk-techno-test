@@ -36,16 +36,13 @@ class WeatherViewController: UIViewController {
             scene = SnowScene(size: skView.bounds.size)
         case .sun:
             scene = SunScene(size: skView.bounds.size)
-//            case .cloudy:
-//                scene = CloudyScene(size: skView.bounds.size)
+        case .cloudy:
+            scene = CloudyScene(size: skView.bounds.size)
         case .lightning:
             scene = LightningScene(size: skView.bounds.size)
-        default:
-            scene = RainScene(size: skView.bounds.size)
         }
         
         scene.scaleMode = .resizeFill
         skView.presentScene(scene)
     }
 }
-
