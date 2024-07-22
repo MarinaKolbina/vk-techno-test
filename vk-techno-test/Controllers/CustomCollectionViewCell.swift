@@ -21,6 +21,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(.black, for: .normal)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: -35, right: 0)
         button.backgroundColor = .clear
         return button
     }()
@@ -42,9 +43,9 @@ class CustomCollectionViewCell: UICollectionViewCell {
         
         NSLayoutConstraint.activate([
             button.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            button.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 35),
+            button.topAnchor.constraint(equalTo: imageView.topAnchor),
             button.widthAnchor.constraint(equalToConstant: 80),
-            button.heightAnchor.constraint(equalToConstant: 40)
+            button.heightAnchor.constraint(equalToConstant: 80)
         ])
     }
     
