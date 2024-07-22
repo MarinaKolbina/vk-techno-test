@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B35266272C4DA40D00CDBCA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35266262C4DA40D00CDBCA0 /* AppDelegate.swift */; };
 		B35266292C4DA40D00CDBCA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35266282C4DA40D00CDBCA0 /* SceneDelegate.swift */; };
-		B35266302C4DA40E00CDBCA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B352662F2C4DA40E00CDBCA0 /* Assets.xcassets */; };
 		B35266332C4DA40E00CDBCA0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B35266322C4DA40E00CDBCA0 /* Base */; };
 		B352663E2C4DA40E00CDBCA0 /* vk_techno_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352663D2C4DA40E00CDBCA0 /* vk_techno_testTests.swift */; };
 		B35266482C4DA40E00CDBCA0 /* vk_techno_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35266472C4DA40E00CDBCA0 /* vk_techno_testUITests.swift */; };
@@ -50,7 +49,6 @@
 		B35266232C4DA40D00CDBCA0 /* vk-techno-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vk-techno-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35266262C4DA40D00CDBCA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B35266282C4DA40D00CDBCA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B352662F2C4DA40E00CDBCA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B35266322C4DA40E00CDBCA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B35266342C4DA40E00CDBCA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B35266392C4DA40E00CDBCA0 /* vk-techno-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "vk-techno-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +124,6 @@
 				B35266562C4DBFB900CDBCA0 /* Controllers */,
 				B35266572C4DBFCB00CDBCA0 /* Scenes */,
 				B35266582C4DBFE000CDBCA0 /* Particles */,
-				B352662F2C4DA40E00CDBCA0 /* Assets.xcassets */,
 				B35266312C4DA40E00CDBCA0 /* LaunchScreen.storyboard */,
 				B35266342C4DA40E00CDBCA0 /* Info.plist */,
 				B3ABBAE42C4EFD5A0045009C /* Localizable.xcstrings */,
@@ -293,7 +290,6 @@
 				B352666A2C4DC26F00CDBCA0 /* SunParticle.sks in Resources */,
 				B352665E2C4DC05400CDBCA0 /* SnowParticle.sks in Resources */,
 				B352665C2C4DC02A00CDBCA0 /* Assets.xcassets in Resources */,
-				B35266302C4DA40E00CDBCA0 /* Assets.xcassets in Resources */,
 				B3ABBAE52C4EFD5A0045009C /* Localizable.xcstrings in Resources */,
 				B35266332C4DA40E00CDBCA0 /* Base in Resources */,
 			);
