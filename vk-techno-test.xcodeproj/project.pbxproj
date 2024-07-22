@@ -178,8 +178,8 @@
 			children = (
 				B35266592C4DC02A00CDBCA0 /* RainParticle.sks */,
 				B352665D2C4DC05400CDBCA0 /* SnowParticle.sks */,
-				B352665A2C4DC02A00CDBCA0 /* Assets.xcassets */,
 				B35266692C4DC26F00CDBCA0 /* SunParticle.sks */,
+				B352665A2C4DC02A00CDBCA0 /* Assets.xcassets */,
 			);
 			path = Particles;
 			sourceTree = "<group>";
